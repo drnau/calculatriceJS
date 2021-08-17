@@ -1,104 +1,83 @@
-<div id="detailCalcul"></div>
-<span id="calc"></span>
-<hr>
-<button id="chiffreSept" value="7">7</button>
-<button id="chiffreHuit" value ="8">8</button>
-<button id="chiffreNeuf" value="9">9</button>
-<button id="calcDivision">/</button><br>
-<button id="chiffreQuatre" value="4">4</button>
-<button id="chiffreCinq" value="5">5</button>
-<button id="chiffreSix" value="6">6</button>
-<button id="calcMultipli">*</button><br>
-<button id="chiffreUn" value="1">1</button>
-<button id="chiffreDeux" value="2">2</button>
-<button id="chiffreTrois" value="3">3</button>
-<button id="calcSous">-</button><br>
-<button id="chiffreZero" value="0">0</button>
-<button id="calcResultat">=</button>
-<button id="calcDeci">.</button>
-<button id="calcPlus">+</button>
-
-<script>
-    let sept=document.getElementById("chiffreSept");
-    let huit=document.getElementById("chiffreHuit");
-    let neuf=document.getElementById("chiffreNeuf");
-    let division=document.getElementById("calcDivision");
-    let quatre=document.getElementById("chiffreQuatre");
-    let cinq=document.getElementById("chiffreCinq");
-    let six=document.getElementById("chiffreSix");
-    let multiplication=document.getElementById("calcMultipli");
-    let un=document.getElementById("chiffreUn");
-    let deux=document.getElementById("chiffreDeux");
-    let trois=document.getElementById("chiffreTrois");
-    let soustraction=document.getElementById("calcSous");
-    let zero=document.getElementById("chiffreZero");
-    let egal=document.getElementById("calcResultat");
-    let plus=document.getElementById("calcPlus");
-    let decimal=document.getElementById("calcDeci");
-    let calculDetail=document.getElementById("detailCalcul")
-    function calculatrice() {
-        let calcul = eval(detailCalcul.innerHTML)
-        calculDetail.innerHTML= calcul
-    }
-    function ecrireSept() {
-        calculDetail.innerHTML += sept.value
-    }
-    function ecrireHuit() {
-        calculDetail.innerHTML += huit.value
-    }
-    function ecrireNeuf() {
-        calculDetail.innerHTML += neuf.value
-    }
-    function ecrireDiv() {
-        calculDetail.innerHTML += "/"
-    }
-    function ecrireQuatre() {
-        calculDetail.innerHTML += quatre.value
-    }    
-    function ecrireCinq() {
-        calculDetail.innerHTML += cinq.value
-    }    
-    function ecrireSix() {
-        calculDetail.innerHTML += six.value
-    }
-    function ecrireMultipli() {
-        calculDetail.innerHTML += "*"
-    }
-    function ecrireUn() {
-        calculDetail.innerHTML += un.value
-    }    
-    function ecrireDeux() {
-        calculDetail.innerHTML += deux.value
-    }    
-    function ecrireTrois() {
-        calculDetail.innerHTML += trois.value
-    }
-    function ecrireMoins() {
-        calculDetail.innerHTML += "-"
-    }
-    function ecrireZero() {
-        calculDetail.innerHTML += zero.value
-    }
-    function ecrireDecimal() {
-        calculDetail.innerHTML += "."
-    }
-    function ecrireAddition() {
-        calculDetail.innerHTML += "+"
-    }
-    egal.addEventListener("click", calculatrice)
-    sept.addEventListener("click", ecrireSept)
-    huit.addEventListener("click", ecrireHuit)
-    neuf.addEventListener("click", ecrireNeuf)
-    division.addEventListener("click", ecrireDiv)
-    quatre.addEventListener("click", ecrireQuatre)
-    cinq.addEventListener("click", ecrireCinq)
-    six.addEventListener("click", ecrireSix)
-    multiplication.addEventListener("click", ecrireMultipli)
-    un.addEventListener("click", ecrireUn)
-    deux.addEventListener("click", ecrireDeux)
-    trois.addEventListener("click", ecrireTrois)
-    soustraction.addEventListener("click", ecrireMoins)
-    zero.addEventListener("click", ecrireZero)
-    decimal.addEventListener("click", ecrireDecimal)
-    plus.addEventListener("click", ecrireAddition)
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="containerb">
+        <input type="text" id="resultat" />
+        <div class="bouttons">
+          <button id="reset">C</button>
+          <button class="ope" id="calcDivision" value="/">/</button>
+          <button class="reste" id="chiffreSept" value="7">7</button>
+          <button class="reste" id="chiffreHuit" value="8">8</button>
+          <button class="reste" id="chiffreNeuf" value="9">9</button>
+          <button class="ope" id="calcMultipli" value="*">*</button>
+          <button class="reste" id="chiffreQuatre" value="4">4</button>
+          <button class="reste" id="chiffreCinq" value="5">5</button>
+          <button class="reste" id="chiffreSix" value="6">6</button>
+          <button class="ope" id="calcSous" value="-">-</button>
+          <button class="reste" id="chiffreUn" value="1">1</button>
+          <button class="reste" id="chiffreDeux" value="2">2</button>
+          <button class="reste" id="chiffreTrois" value="3">3</button>
+          <button class="ope" id="calcPlus" value="+">+</button>
+          <button class="reste" id="chiffreZero" value="0">0</button>
+          <button class="reste" id="calcDeci" value=".">.</button>
+          <button class="ope" id="calcResultat">=</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let sept = document.getElementById("chiffreSept");
+      let huit = document.getElementById("chiffreHuit");
+      let neuf = document.getElementById("chiffreNeuf");
+      let division = document.getElementById("calcDivision");
+      let quatre = document.getElementById("chiffreQuatre");
+      let cinq = document.getElementById("chiffreCinq");
+      let six = document.getElementById("chiffreSix");
+      let multiplication = document.getElementById("calcMultipli");
+      let un = document.getElementById("chiffreUn");
+      let deux = document.getElementById("chiffreDeux");
+      let trois = document.getElementById("chiffreTrois");
+      let soustraction = document.getElementById("calcSous");
+      let zero = document.getElementById("chiffreZero");
+      let egal = document.getElementById("calcResultat");
+      let plus = document.getElementById("calcPlus");
+      let decimal = document.getElementById("calcDeci");
+      let elResultat = document.getElementById("resultat");
+      let elClear = document.getElementById("reset");
+      function ajoute() {
+        elResultat.value += this.value;
+      }
+      function calcul() {
+        let resultat = eval(elResultat.value);
+        elResultat.value = resultat;
+      }
+      function reset() {
+        elResultat.value = "";
+      }
+      egal.addEventListener("click", calcul);
+      sept.addEventListener("click", ajoute);
+      huit.addEventListener("click", ajoute);
+      neuf.addEventListener("click", ajoute);
+      division.addEventListener("click", ajoute);
+      quatre.addEventListener("click", ajoute);
+      cinq.addEventListener("click", ajoute);
+      six.addEventListener("click", ajoute);
+      multiplication.addEventListener("click", ajoute);
+      un.addEventListener("click", ajoute);
+      deux.addEventListener("click", ajoute);
+      trois.addEventListener("click", ajoute);
+      soustraction.addEventListener("click", ajoute);
+      zero.addEventListener("click", ajoute);
+      decimal.addEventListener("click", ajoute);
+      plus.addEventListener("click", ajoute);
+      elClear.addEventListener("click", reset);
+    </script>
+  </body>
+</html>
